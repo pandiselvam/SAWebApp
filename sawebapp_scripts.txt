@@ -1,0 +1,59 @@
+DROP TABLE [dbo].[users_mb]
+CREATE TABLE [dbo].[users_mb](
+	[rec_id] [bigint] NOT NULL,
+	[user_id] [varchar](255) NULL,
+	[user_name] [varchar](255) NULL,
+	[first_name] [varchar](255) NULL,
+	[last_name] [varchar](255) NULL,
+	[role] [varchar](255) NULL,
+	[pass_word] [varchar](255) NULL,
+	[apprisal_status] [varchar](255) NULL,
+	[rating] [varchar](255) NULL,
+	[points] [int] NULL,
+	[comments] [varchar](255) NULL,
+	[lastyear1_rating] [varchar](255) NULL,
+	[lastyear1_points] [int] NULL,
+	[lastyear1_comments] [varchar](255) NULL,
+	[lastyear1_manager] [varchar](255) NULL,
+	[lastyear2_rating] [varchar](255) NULL,
+	[lastyear2_points] [int] NULL,
+	[lastyear2_comments] [varchar](255) NULL,
+	[lastyear2_manager] [varchar](255) NULL,
+	[goal_status] [varchar](255) NULL,
+	[reporting_manager] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[rec_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+
+
+DROP TABLE [dbo].[users_appraisal_mb]
+CREATE TABLE [dbo].[users_appraisal_mb](
+	[rec_id] [bigint] NOT NULL,
+	[mkt_date] [date] NOT NULL,
+	[user_id] [varchar](75) NULL,
+	[user_name] [varchar](255) NULL,
+	[apprisal_status] [varchar](25) NULL,
+	[goal_type] [varchar](75) NULL,
+	[goal_name] [varchar](255) NULL,
+	[goal_desc] [varchar](500) NULL,
+	[goal_rating] [varchar](75) NULL,
+	[goal_points] [float] NULL,
+	[goal_comments] [varchar](500) NULL,
+	[manager_rating] [varchar](75) NULL,
+	[manager_points] [float] NULL,
+	[manager_comments] [varchar](500) NULL,
+	[status] [varchar](25) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[rec_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+
+
+INSERT INTO [dbo].[users_mb]([rec_id],[user_id],[user_name],[first_name],[last_name],[role],[pass_word],[apprisal_status],[rating],[points],[comments],[lastyear1_rating],[lastyear1_points],[lastyear1_comments],[lastyear1_manager],[lastyear2_rating],[lastyear2_points],[lastyear2_comments],[lastyear2_manager],[goal_status],[reporting_manager])  VALUES(101,'asha101','asha.sridhar','Asha', 'Sridhar', 'Senior Software Engineer', 'Welcome@01', 'Open', null,0,null,'ME - Met Expectation', 75,' Met the expectation', 'gayathri.sukumar', 'ME - Met Expectation', 75,' Met the expectation',  'Gayathri.Sukumar',null,'gayathri.sukumar')
+INSERT INTO [dbo].[users_mb]([rec_id],[user_id],[user_name],[first_name],[last_name],[Role],[pass_word],[apprisal_status],[rating],[points],[comments],[lastyear1_rating],[lastyear1_points],[lastyear1_comments],[lastyear1_manager],[lastyear2_rating],[lastyear2_points],[lastyear2_comments],[lastyear2_manager],[goal_status],[reporting_manager])  VALUES(100,'gaya100','gayathri.sukumar','Gayathri', 'Sukumar', 'Project Manager', 'Welcome@01', 'Open', null,0,null,'ME - Met Expectation', 75,' Met the expectation', 'vivek.subramaniyam', 'ME - Met Expectation', 75,' Met the expectation',  'vivek.subramaniyam', null, 'vivek.subramaniyam')
+INSERT INTO [dbo].[users_mb]([rec_id],[user_id],[user_name],[first_name],[last_name],[Role],[pass_word],[apprisal_status],[rating],[points],[comments],[lastyear1_rating],[lastyear1_points],[lastyear1_comments],[lastyear1_manager],[lastyear2_rating],[lastyear2_points],[lastyear2_comments],[lastyear2_manager],[goal_status],[reporting_manager])  VALUES(102,'rajk101','rajkumar.ramasamy','Rajkumar', 'Ramasamy', 'Software Engineer', 'Welcome@01', 'Open', null,0,null,'ME - Met Expectation', 75,' Met the expectation', 'gayathri.sukumar', 'ME - Met Expectation', 75,' Met the expectation',  'Gayathri.Sukumar',null,'gayathri.sukumar')
+
+
